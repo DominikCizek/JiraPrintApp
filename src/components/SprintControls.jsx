@@ -13,7 +13,7 @@ export default function SprintControls(props){
     }
     return(
         <div className="sprintControls">
-            <p><img src={checkIcon} id="checkIcon" />Vygenerováno {props.tasks} kartiček</p>
+            <p><img src={checkIcon} id="checkIcon" alt="checkIcon" />Vygenerováno {props.tasks} kartiček</p>
             <div>
                 <button className="btn secondary" onClick={()=>setShowUpload(prev => !prev.showUpload)}>
                 <img src={uploadIcon} alt="Upload icon" className="controlIcon"/>

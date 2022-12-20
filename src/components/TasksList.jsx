@@ -1,4 +1,3 @@
-import react from 'react';
 import Task from './Task';
 
 export default function TasksList(props){

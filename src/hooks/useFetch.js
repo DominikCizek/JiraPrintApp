@@ -1,7 +1,5 @@
-import React, {useState, useEffect} from "react";
+import  {useState, useEffect} from "react";
 import axios from 'axios'
-
-
 
  function useFetch(passedUrl){
 
@@ -15,7 +13,6 @@ import axios from 'axios'
         'Authorization': 'Basic c2Fyc29uakBnbWFpbC5jb206eEhVMG5ublRZbk5VZVVsaUMyejcyMUYz', 
       },
     };
-    
 
     useEffect(()=>{
         setLoading(true)

@@ -45,15 +45,15 @@ export default function Sprint (props){
                     <h3 className="sprintName">{chosenSprint.data.name}</h3>
                     <h2 className="sprintGoal">{chosenSprint.data.goal}</h2>
                 </div>
-                {sprintImage && <img src={URL.createObjectURL(sprintImage)} className="sprintImage"/>}
+                {sprintImage && <img src={URL.createObjectURL(sprintImage)} alt="sprintImage" className="sprintImage"/>}
             </div>
             <div id="sprintTimeHolder">
                 <div id="sprintStart" className="sprintTime">
-                    <img src={startFlag} />
+                    <img src={startFlag} alt="startFlag" />
                     <h3>{formatDate(chosenSprint.data.startDate)}</h3>
                 </div>
                 <div id="sprintEnd" className="sprintTime">
-                    <img src={endFlag} />
+                    <img src={endFlag} alt="endFlag"/>
                     <h3>{formatDate(chosenSprint.data.endDate)}</h3>
                 </div>
             </div>
