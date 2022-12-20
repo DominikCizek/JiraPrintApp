@@ -1,38 +1,237 @@
-.App {
+
+h1, h2, h3, h4, p{
+  font-family: "Red Hat Display";
+}
+body{
+  width: 90%;
+    margin: auto;
+}
+.story{
+  padding: 5px;
+  margin: 3px;
+}
+
+.logoHolder{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px 16px 0px;
+}
+.logo{
+  width: 180px;
+  height: 40px;
+}
+#sprintGenerator{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#sprintGenerator h2{
+  font-size: 5rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#sprintGenerator h4{
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 2rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.sprintSelect{
+  margin: 10px;
+}
+.btn{
+  padding: 12px 32px 12px 32px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-left: 15px;
+}
+.primary{
+  background-color: #0077CC;
   color: white;
 }
+.secondary{
+  color: #0077CC;
+  background: white;
+  border: 1px solid #0077CC;
+}
+#sprintDropdown{
+  display: flex;
+  justify-content: center;
+}
+#sprintSelect{
+  border-radius: 15px;
+  border: 1px solid grey;
+  font-weight: 400;
+  margin-right: 20px;
+  padding: 0px 25px 0px 25px;
+  cursor:pointer ;
+}
+#sprintBanner{
+  margin: auto;
+  border: 1px solid grey;
+  padding-left: 50px;
+  padding-bottom: 35px;
+}
+#sprintHeader{
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.sprintName{
+  color: #00000099;
+  font-size: 2rem;
+}
+.sprintGoal{
+  font-size: 3vw;
+}
+#sprintInfo{
+  width: 50%;
 
-.App-link {
-  color: #61dafb;
+}
+.sprintControls{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  margin-top: 45px;
+}
+.controlIcon{
+  margin-right: 14px;
+}
+.sprintControls p{
+  color: rgba(0, 0, 0, 0.6);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#sprintImage{
+  width: 420px;
+  height: auto;
+}
+#sprintTimeHolder{
+  display: flex;
+}
+.sprintTime{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 80px;
+  border-radius: 25px;
+  padding: 12px 20px;
+  margin-right: 20px;
+}
+.sprintImage{
+    margin-left: 50px;
+    display: block;
+    max-width:460px;
+    max-height:190px;
+    width: auto;
+    height: auto;
+  
+}
+.sprintTime img{
+  margin-right: 25px;
+}
+#sprintStart{
+  color: #138700;
+  background-color: #55D9401F;
+}
+#sprintEnd{
+  color: #FF416F;
+  background-color: rgba(255, 65, 111, 0.12);
+}
+.sprintTime h3{
+  font-size: 2rem;
+}
+.tasksHolder{
+  display: flex;
+  flex-wrap: wrap;
+}
+ .task{
+  width: 50%; 
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid grey;
+  padding-bottom: 15px;
+}
+.taskHeader{
+  display: flex;
+  padding-left: 10px;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+.taskEmoji{
+  display: flex;
+    align-items: center;
+}
+
+.taskHeader h4{
+  color: rgba(0, 0, 0, 0.54);
+  margin-left: 5px;
+}
+.taskSummary{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0px;
+}
+.subtasksHolder{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.subtask{
+  flex-basis: 33%;
+  border: 1px solid grey;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.subtaskColor{
+  min-height: 80px;
+  min-width: 5px;
+  width: 8px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+.subtaskCount{
+  width: 52px;
+  height: 52px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin-right: 10px;
+  text-align: center;
+}
+.footerText{
+  width: 100%;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+#checkIcon{
+  margin-right: 10px;
+}
+
+
+@media print {
+ .logoHolder, #sprintGenerator, .sprintControls{
+  display: none;
+ }
+ #sprintBanner, .task, .subtask{
+  break-inside: avoid;
+ }
+ #sprintHeader{
+  margin-bottom: 0px;
+ }
+
+  /* body {
+    margin: 0;
+    color: #000;
+    background-color: #fff;
   }
-  to {
-    transform: rotate(360deg);
+  .story{
+    border: 1px solid black;
+    break-inside: avoid;
   }
+  .sprintTitle{
+    display: none;
+  } */
 }
