@@ -120,8 +120,6 @@ body{
     display: block;
     max-width:460px;
     max-height:190px;
-    width: auto;
-    height: auto;
   
 }
 .sprintTime img{
@@ -200,6 +198,7 @@ body{
   border-radius: 16px;
   margin-right: 10px;
   text-align: center;
+  font-weight: bold;
 }
 .footerText{
   width: 100%;
